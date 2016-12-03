@@ -578,6 +578,9 @@ section#contact {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
+
 section#contact .section-heading {
   color: white;
 }
@@ -763,3 +766,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+
+
+   .bgimg {
+    background-image: url('../img/map1-image.jpg');
+}
+
