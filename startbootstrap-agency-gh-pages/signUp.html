@@ -43,6 +43,47 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+        $('#reg').click(function () {
+            var username = $('#username').val();
+            var name = $('#name').val();
+            var mail = $('#mail').val();
+            var password = $('#password').val();
+
+            writeToFile2(username,name,mail,password);
+
+            var selected = new Array();
+            $(".select").each(function () {
+                selected.push($(this.).val());
+            });
+    
+            for (var i = 0; i < selected.length; i++) {
+                writeToFile(selected[i]);
+            }
+
+
+        });
+
+    function writeToFile(d1) {
+
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var fh = fso.OpenTextFile("data.txt", 8, true, 0);  
+        fh.WriteLine(d1);
+        fh.Close();
+
+    }
+    function writeToFile2(username,name,mail,password) {
+
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var fh = fso.OpenTextFile("data2.txt", 8, true, 0);  
+        fh.WriteLine(username+","+name+","+mail+","+password);
+        fh.Close();
+
+    }
+
+
+    </script>
+
 </head>
 
 <body id="page-top" class="index" >
@@ -62,16 +103,20 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-               <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="index.html#about">About us</a>
-                    </li>
-                  
-                    <li>
-                        <a class="page-scroll" href="index.html#contact">Contact us</a>
-                    </li>
+
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#services">Speaker</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#portfolio">About us</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">Contact us</a>
+                </li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
