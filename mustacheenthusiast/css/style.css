@@ -408,3 +408,47 @@ p a:hover {
 #footer div ul li #pinterest:hover {
 	background-position: -44px -132px;
 }
+
+
+
+#HotPosts{
+	
+	position : relative;
+    position: absolute;
+    top: 200px;
+    left: 420px;
+    width: 200px;
+    height: 100px;
+	border: 2px;
+    
+	
+}
+
+#FreshPosts{
+	position : relative;
+    position: absolute;
+    top: 200px;
+    right: 420px;
+    width: 200px;
+    height: 100px;
+	border: 2px;
+	
+	
+}
+
+#askQuestion{
+	
+	position:fixed;
+	right:500px;
+	bottom:0px;
+	width:500px;
+	height:200px;
+	
+}
+
+#voteOnLec{
+	
+	position:relative;
+	right:0px;
+	
+}
